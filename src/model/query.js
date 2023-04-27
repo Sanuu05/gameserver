@@ -9,6 +9,9 @@ const querySchema = mongoose.Schema({
     user: {
         type: Object
     },
+    payType: {
+        type: Object
+    },
     eventStart: {
         type: String
     },

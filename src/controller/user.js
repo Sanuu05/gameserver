@@ -145,7 +145,7 @@ exports.removeCartItem=async(req,res)=>{
 }
 exports.Postquery= async(req,res)=>{
     try {
-        const {item,eventStart,eventEnd,setUp,totalItemAmount,totalHours,delivery,deliveryCharges,totalAmount,user} = req.body
+        const {item,eventStart,eventEnd,setUp,totalItemAmount,totalHours,delivery,deliveryCharges,totalAmount,user,payType} = req.body
         console.log('ee',req.user)
         const putdata = new Query({
             items:item,
@@ -157,7 +157,7 @@ exports.Postquery= async(req,res)=>{
             ,delivery
             ,deliveryCharges
             ,totalAmount,
-            user
+            user,payType
 
         })
         const saveData =await putdata.save()
